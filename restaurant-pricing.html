@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
     <script src="lib/angular.js"></script>
     <script src="app.js"></script>
     <script src="controllers/PizzaController.js"></script>
@@ -13,6 +14,10 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to the Pizza Cream Factory</h1>
+        <h3>Where you come to get your cream pies</h3>
+      </div>
       <div class="col-xs-6" ng-controller="PizzaCtrl">
         <h2>Order Pizza Here:</h2>
         <button class="btn btn-warning" ng-click="OrdersFactory.addSlice()">Add Slice</button>
