@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="pizzaCream">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/PizzaController.js"></script>
+    <script src="controllers/CreamController.js"></script>
+    <script src="services/OrdersFactory.js"></script>
+    <title>Pizza Cream</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-xs-6" ng-controller="PizzaCtrl">
+        <h2>Order Pizza Here:</h2>
+        <button class="btn btn-warning" ng-click="OrdersFactory.addSlice()">Add Slice</button>
+        <button class="btn btn-success" ng-click="OrdersFactory.deleteSlice()">Remove Slice</button>
+        <div ng-show="OrdersFactory.slices">
+          <h3>Order:</h3>
+          <h4>- Slices: {{OrdersFactory.slices}}</h4>
+        </div>
+
+      </div>
+      <div class="col-xs-6">
+        <h2>Order Ice Cream Here:</h2>
+
+      </div>
+    </div>
+
+  </body>
+</html>
