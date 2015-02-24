@@ -21,10 +21,26 @@
           <h3>Order:</h3>
           <h4>- Slices: {{OrdersFactory.slices}}</h4>
         </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h5>Total Cost: ${{OrdersFactory.slicesAmount}}</h5>
+          </div>
+        </div>
 
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-6" ng-controller="CreamCtrl">
         <h2>Order Ice Cream Here:</h2>
+        <button class="btn btn-warning" ng-click="OrdersFactory.addScoop()">Add Scoop</button>
+        <button class="btn btn-success" ng-click="OrdersFactory.deleteScoop()">Remove Scoop</button>
+        <div ng-show="OrdersFactory.scoops">
+          <h3>Order:</h3>
+          <h4>- Scoops: {{OrdersFactory.scoops}}</h4>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <h5>Total Cost: ${{OrdersFactory.scoopsAmount}}</h5>
+          </div>
+        </div>
 
       </div>
     </div>
