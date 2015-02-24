@@ -2,13 +2,13 @@ pizzaCream.factory('OrdersFactory', function OrdersFactory() {
   var factory = {};
   factory.slices = 0;
   factory.scoops = 0;
-  factory.slicesAmount = 0;
+  factory.slicesAmount = factory.slices * 3;
   factory.scoopsAmount = 0;
 
 
   factory.addSlice = function() {
     factory.slices += 1;
-    factory.slicesAmount += 3;
+    // factory.slicesAmount += 3;
   };
 
 
